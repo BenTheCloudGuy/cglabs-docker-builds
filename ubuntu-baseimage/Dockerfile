@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-# Prevents installdependencies.sh from prompting the user and blocking the image creation
+# Prevents installdependencies.sh from prompting the user and blocking the build
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Update apt and add docker user
