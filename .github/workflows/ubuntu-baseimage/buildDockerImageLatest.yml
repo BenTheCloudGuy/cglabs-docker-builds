@@ -1,10 +1,10 @@
-name: "Build Working Image"
+name: "Build Latest Image"
 on:
   pull_request:
     branches: [ main ]
       paths:
-        - github-runner-build/**
-        - ubuntu-baseimage/**
+        - 'ubuntu-baseimage/**'
+        - '!ubuntu-baseimage/README.md'
   
 jobs:
   docker:
@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: benthebuilder/cglabs-gh-runner
+          tags: benthebuilder/ubuntu-baseimage:latest
