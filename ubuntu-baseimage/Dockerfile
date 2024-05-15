@@ -15,3 +15,4 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/${OS_VERSION}/packages-
     && dpkg -i packages-microsoft-prod.deb \
     && apt update -y \
     && apt install -y powershell
+    
