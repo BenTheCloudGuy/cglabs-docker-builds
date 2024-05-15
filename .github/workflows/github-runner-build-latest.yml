@@ -25,5 +25,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
+          context: "{{defaultContext}}:github-runner-build"
           push: true
           tags: benthebuilder/cglabs-gh-runner:latest
