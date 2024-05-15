@@ -2,9 +2,9 @@ name: "Build Working Image"
 on:
   push:
     branches: [ "working" ]
-      paths:
-        - 'gh-runner-devcontainer/**'
-        - '!gh-runner-devcontainer/README.md'
+    paths:
+      - 'gh-runner-devcontainer/**'
+      - '!gh-runner-devcontainer/README.md'
     
 jobs:
   docker:

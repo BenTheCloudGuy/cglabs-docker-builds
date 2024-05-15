@@ -2,9 +2,9 @@ name: "Build Working Image"
 on:
   push:
     branches: [ "working" ]
-      paths:
-        - 'ubuntu-baseimage/**'
-        - '!ubuntu-baseimage/README.md'
+    paths:
+      - 'ubuntu-baseimage/**'
+      - '!ubuntu-baseimage/README.md'
     
 jobs:
   docker:

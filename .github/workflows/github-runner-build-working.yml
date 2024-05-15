@@ -2,9 +2,9 @@ name: "Build Working Image"
 on:
   push:
     branches: [ "working" ]
-      paths:
-        - 'github-runner-build/**'
-        - '!github-runner-build/README.md'
+    paths:
+      - 'github-runner-build/**'
+      - '!github-runner-build/README.md'
     
 jobs:
   docker:

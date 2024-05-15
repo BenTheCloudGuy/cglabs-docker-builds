@@ -2,9 +2,9 @@ name: "Build Latest Image"
 on:
   pull_request:
     branches: [ main ]
-      paths:
-        - 'ubuntu-baseimage/**'
-        - '!ubuntu-baseimage/README.md'
+    paths:
+      - 'ubuntu-baseimage/**'
+      - '!ubuntu-baseimage/README.md'
   
 jobs:
   docker:
