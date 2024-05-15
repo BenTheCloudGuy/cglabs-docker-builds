@@ -1,7 +1,7 @@
 name: "Build Working Image"
 on:
   push:
-    branches: [ "working" ]
+    branches: [ working ]
     paths:
       - 'github-runner-build/**'
       - '!github-runner-build/README.md'
