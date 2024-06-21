@@ -2,9 +2,9 @@ name: "Build Latest Image"
 on:
     pull_request:
       branches: [ main ]
-        paths:
-          - 'az-devops-devcontainer/**'
-          - '!az-devops-devcontainer/README.md'
+      paths:
+        - 'az-devops-devcontainer/**'
+        - '!az-devops-devcontainer/README.md'
   
 jobs:
   docker:
