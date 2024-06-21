@@ -1,4 +1,4 @@
-name: "Build Latest Image"
+name: "Build github-runner-build [Latest]"
 on:
   pull_request:
     branches: [ main ]

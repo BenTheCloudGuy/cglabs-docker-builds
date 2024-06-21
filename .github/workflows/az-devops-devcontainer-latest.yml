@@ -1,4 +1,4 @@
-name: "Build Latest Image"
+name: "Build az-devops-devcontainer [Latest]"
 on:
   pull_request:
     branches: [ main ]

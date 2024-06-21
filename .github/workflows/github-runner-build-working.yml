@@ -1,4 +1,4 @@
-name: "Build Working Image"
+name: "Build github-runner-build [Working]"
 on:
   push:
     branches: [ working ]

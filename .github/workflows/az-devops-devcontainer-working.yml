@@ -1,4 +1,4 @@
-name: "Build Working Image"
+name: "Build az-devops-devcontainer [Working]"
 on:
   push:
     branches: [ working ]
