@@ -1,7 +1,7 @@
 name: "Build Working Image"
 on:
   push:
-    branches: [ "working" ]
+    branches: [ working ]
     paths:
       - 'az-devops-devcontainer/**'
       - '!az-devops-devcontainer/README.md'
@@ -25,5 +25,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
+          context: "{{defaultContext}}:az-devops-devcontainer"
           push: true
           tags: benthebuilder/az-devops-devcontainer:working

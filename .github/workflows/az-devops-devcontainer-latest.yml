@@ -1,10 +1,10 @@
 name: "Build Latest Image"
 on:
-    pull_request:
-      branches: [ main ]
-      paths:
-        - 'az-devops-devcontainer/**'
-        - '!az-devops-devcontainer/README.md'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'az-devops-devcontainer/**'
+      - '!az-devops-devcontainer/README.md'
   
 jobs:
   docker:
@@ -25,5 +25,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
+          context: "{{defaultContext}}:az-devops-devcontainer"
           push: true
           tags: benthebuilder/gh-runner-devcontainer:latest
