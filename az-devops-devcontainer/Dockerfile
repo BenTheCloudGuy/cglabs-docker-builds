@@ -42,4 +42,3 @@ RUN wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/shar
 # Install Ansible
 RUN apt-get install -y ansible \
     && ansible-galaxy collection install azure.azcollection
-    
