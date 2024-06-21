@@ -2,9 +2,9 @@ name: "Build Working Image"
 on:
   push:
     branches: [ "working" ]
-      paths:
-        - 'az-devops-devcontainer/**'
-        - '!az-devops-devcontainer/README.md'
+    paths:
+      - 'az-devops-devcontainer/**'
+      - '!az-devops-devcontainer/README.md'
     
 jobs:
   docker:

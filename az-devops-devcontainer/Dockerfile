@@ -1,6 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/base:bullseye
 
 # Set the Arguments for the Dockerfile
+ARG VERSION="1.0.1"
 ARG INSTALL_ZSH="true"
 ARG UPGRADE_PACKAGES="false"
 ARG PWSH_VERSION="v7.4.3"
