@@ -27,4 +27,4 @@ jobs:
         with:
           context: "{{defaultContext}}:az-devops-devcontainer"
           push: true
-          tags: benthebuilder/gh-runner-devcontainer:latest
+          tags: benthebuilder/az-devops-devcontainer:latest
