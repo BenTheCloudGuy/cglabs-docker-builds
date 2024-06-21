@@ -1,10 +1,10 @@
 name: "Build Working Image"
 on:
   push:
-    branches: [ "working" ]
-      paths:
-        - 'ubuntu-baseimage/**'
-        - '!ubuntu-baseimage/README.md'
+    branches: [ working ]
+    paths:
+      - 'az-devops-devcontainer/**'
+      - '!az-devops-devcontainer/README.md'
     
 jobs:
   docker:
@@ -25,5 +25,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
+          context: "{{defaultContext}}:az-devops-devcontainer"
           push: true
-          tags: benthebuilder/ubuntu-baseimage:working
+          tags: benthebuilder/az-devops-devcontainer:working

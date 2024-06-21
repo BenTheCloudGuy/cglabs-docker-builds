@@ -1,10 +1,10 @@
 name: "Build Working Image"
 on:
   push:
-    branches: [ "working" ]
-      paths:
-        - 'github-runner-build/**'
-        - '!github-runner-build/README.md'
+    branches: [ working ]
+    paths:
+      - 'github-runner-build/**'
+      - '!github-runner-build/README.md'
     
 jobs:
   docker:
@@ -25,5 +25,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
+          context: "{{defaultContext}}:github-runner-build"
           push: true
           tags: benthebuilder/cglabs-gh-runner:working

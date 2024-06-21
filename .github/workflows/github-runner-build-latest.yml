@@ -1,11 +1,11 @@
 name: "Build Latest Image"
 on:
-    pull_request:
-      branches: [ main ]
-        paths:
-          - 'github-runner-build/**'
-          - '!github-runner-build/README.md'
-  
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'github-runner-build/**'
+      - '!github-runner-build/README.md'
+
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -25,5 +25,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
+          context: "{{defaultContext}}:github-runner-build"
           push: true
           tags: benthebuilder/cglabs-gh-runner:latest
