@@ -19,10 +19,9 @@ Docker Image can be found at: [DockerHub | BenTheBuilder/gh-runner-devcontainer]
 - Hashicorp Terraform
 - Azure CLI
 - Powershell Core
-   - Az Module
-   - AzureAD Module
-   - Microsoft.Graph Module
-
+- Az Module
+- AzureAD Module
+- Microsoft.Graph Module
 
 ## Prerequisites
 
@@ -38,7 +37,7 @@ Before using this Docker image, ensure you have the following prerequisites inst
 Pull the latest version of the custom GitHub Runner Docker image from Docker Hub:
 
 ```bash
-docker pull benthebuilder/cglabs-gh-runner
+docker pull benthebuilder/az-devops-devcontainer
 ```
 
 ### 2. Configure Runner
@@ -50,7 +49,7 @@ Set up the runner by providing necessary configuration options such as GitHub re
 Start the Docker container using the pulled image:
 
 ```bash
-docker run -d --name='gh-runner-devcontainer:latest' `
+docker run -d --name='az-devops-devcontainer:latest' `
 ```
 
 ## Configuration

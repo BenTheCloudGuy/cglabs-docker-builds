@@ -1,0 +1,41 @@
+{
+  "name": "DevOps DevContainer (CodeSpaces)",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": ["--init"],
+  "mounts": [
+    // [Optional] Anisble Collections: Uncomment if you want to mount your local .ansible/collections folder.
+    // "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ansible/collections,target=/root/.ansible/collections,type=bind,consistency=cached",
+    "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
+  ],
+  "overrideCommand": false,
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+          "4ops.terraform@0.2.5",
+          "4ops.packer@0.3.0",
+          "hashicorp.terraform@2.30.2",
+          "ms-azuretools.vscode-bicep@0.28.1",
+          "ms-azuretools.vscode-azureterraform@0.3.2",
+          "github.codespaces@1.16.23",
+          "github.copilot@1.204.0",
+          "github.copilot-chat@0.16.1",
+          "github.vscode-github-actions@0.26.3",
+          "github.vscode-pull-request-github@0.90.0",
+          "redhat.ansible@24.6.0"
+      ]
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "ansible --version",
+
+  // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode"
+}
