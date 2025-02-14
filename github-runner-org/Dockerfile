@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 # Set the Arguments for the Dockerfile
 ARG RUNNER_VERSION="2.314.1"        # Use this to set the Download Version for the Runner
