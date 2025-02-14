@@ -28,7 +28,7 @@ if [ -d $SSH_TMP_DIR ]; then
 fi
 
 echo "Collecting Registration Token from GitHub"
-REG_TOKEN=$(curl -X POST -H "Authorization: token ${ACCESS_TOKEN}" -H "Accept: application/vnd.github+json" https://api.github.com/repos/cloudgeeklabs/actions/runners/registration-token | jq .token --raw-output)
+REG_TOKEN=$(curl -X POST -H "Authorization: token ${ACCESS_TOKEN}" -H "Accept: application/vnd.github+json" https://api.github.com/orgs/cloudgeeklabs/actions/runners/registration-token | jq .token --raw-output)
 
 echo "${REG_TOKEN}"
 cd /home/docker/actions-runner
