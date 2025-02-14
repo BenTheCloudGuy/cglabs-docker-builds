@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: "Build github-runner-build [Latest]"
+=======
+name: "Build Latest Image: Repo Level Runner"
+>>>>>>> main
 on:
   pull_request:
     branches: [ main ]
