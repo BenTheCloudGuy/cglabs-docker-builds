@@ -1,11 +1,11 @@
-name: "Build Latest Image: GitHub Org Runner"
+name: "Build Working Image: Github Org Runner"
 on:
-  pull_request:
-    branches: [ main ]
+  push:
+    branches: [ working ]
     paths:
       - 'github-runner-org/**'
       - '!github-runner-org/README.md'
-
+    
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -27,4 +27,4 @@ jobs:
         with:
           context: "{{defaultContext}}:github-runner-org"
           push: true
-          tags: benthebuilder/cglabs-gh-org:latest
+          tags: benthebuilder/cglabs-gh-org:working

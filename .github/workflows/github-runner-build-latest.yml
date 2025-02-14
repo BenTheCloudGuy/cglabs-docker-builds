@@ -1,4 +1,4 @@
-name: "Build Latest Image"
+name: "Build Latest Image: Repo Level Runner"
 on:
   pull_request:
     branches: [ main ]
